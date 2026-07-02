@@ -1,0 +1,6 @@
+name,purpose,personal_data,region,outside_uk,transfer_mechanism
+Northwind Hosting Ltd,Application and database hosting,All account and client data,"London, UK",no,
+Email delivery provider,Booking-reminder emails,"Client name, email address",EEA (Dublin),yes,UK adequacy
+SMS gateway provider,Booking-reminder texts,"Client name, mobile number",UK,no,
+Payments provider,Subscription billing (salon card only),"Salon name, email, payment metadata",US,yes,UK IDTA + transfer risk assessment on file
+Privacy-friendly analytics,"Cookie-free, aggregated product usage","None (aggregated, no identifiers)",EEA,yes,UK adequacy

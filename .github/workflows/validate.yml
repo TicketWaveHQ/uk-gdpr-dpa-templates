@@ -1,0 +1,41 @@
+name: Validate templates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate sub-processor example
+        run: node scripts/validate-subprocessors.mjs
+
+      - name: Validate example CSV header
+        run: |
+          head -n 1 examples/sub-processors.example.csv | \
+          grep -q '^name,purpose,personal_data,region,outside_uk,transfer_mechanism$' \
+          && echo "CSV header OK" || (echo "CSV header changed unexpectedly" && exit 1)
+
+      - name: Check disclaimer present on every template
+        run: |
+          missing=0
+          for f in templates/*.md examples/*.md; do
+            if ! grep -qi "not legal advice" "$f"; then
+              echo "missing 'not legal advice' notice: $f"
+              missing=1
+            fi
+          done
+          exit $missing

@@ -1,0 +1,56 @@
+{
+  "service": "BrightSlot",
+  "updated": "2026-07-01",
+  "noticePeriodDays": 30,
+  "publicUrl": "https://brightslot.example/sub-processors",
+  "privacyContact": "privacy@brightslot.example",
+  "note": "Fictional example. Region is the region configured, not merely supported.",
+  "subProcessors": [
+    {
+      "name": "Northwind Hosting Ltd",
+      "purpose": "Application and database hosting",
+      "personalData": "All account and client data",
+      "region": "London, UK",
+      "outsideUk": false,
+      "transferMechanism": null
+    },
+    {
+      "name": "Email delivery provider",
+      "purpose": "Booking-reminder emails",
+      "personalData": "Client name, email address",
+      "region": "EEA (Dublin)",
+      "outsideUk": true,
+      "transferMechanism": "UK adequacy"
+    },
+    {
+      "name": "SMS gateway provider",
+      "purpose": "Booking-reminder texts",
+      "personalData": "Client name, mobile number",
+      "region": "UK",
+      "outsideUk": false,
+      "transferMechanism": null
+    },
+    {
+      "name": "Payments provider",
+      "purpose": "Subscription billing (salon card only)",
+      "personalData": "Salon name, email, payment metadata",
+      "region": "US",
+      "outsideUk": true,
+      "transferMechanism": "UK IDTA + transfer risk assessment on file"
+    },
+    {
+      "name": "Privacy-friendly analytics",
+      "purpose": "Cookie-free, aggregated product usage",
+      "personalData": "None (aggregated, no identifiers)",
+      "region": "EEA",
+      "outsideUk": true,
+      "transferMechanism": "UK adequacy"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-07-01",
+      "change": "Initial publication of this list."
+    }
+  ]
+}
