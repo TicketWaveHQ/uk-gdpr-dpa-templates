@@ -14,6 +14,7 @@ Most DPA templates are written by lawyers for lawyers. These are written to be r
 | [`templates/sub-processor-disclosure.md`](templates/sub-processor-disclosure.md) | A public sub-processor list template plus the change-notice wording for a 30-day disclosure discipline. |
 | [`templates/sub-processor-change-notice.md`](templates/sub-processor-change-notice.md) | The short email and on-page notice you send when you add, remove, or change a sub-processor. |
 | [`templates/international-transfer-addendum.md`](templates/international-transfer-addendum.md) | The UK International Data Transfer Addendum (IDTA) cover note and when to use it. |
+| [`templates/ai-processing-addendum.md`](templates/ai-processing-addendum.md) | AI and machine-learning processing: model disclosure, inference region, training restrictions, AI Act roles |
 | [`examples/dpa-worked-example.md`](examples/dpa-worked-example.md) | The DPA filled in for a fictional small SaaS, so you can see what "done" looks like. |
 | [`examples/sub-processors.example.json`](examples/sub-processors.example.json) | A machine-readable sub-processor list you can render into a public page. |
 | [`examples/sub-processors.example.csv`](examples/sub-processors.example.csv) | The same list as a spreadsheet-friendly CSV. |
