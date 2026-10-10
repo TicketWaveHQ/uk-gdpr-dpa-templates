@@ -22,7 +22,7 @@ Most DPA templates are written by lawyers for lawyers. These are written to be r
 ## Who this is for
 
 - **Small SaaS and micro-SaaS founders** who have just signed a customer who wants a DPA and do not have a legal team on call.
-- **Lean agencies** building sites and apps for clients, who process personal data on the client's behalf and need clean processor terms. This is the exact position most small web studios are in, including the one that maintains this repo, [UK Web Marketing](https://ukwebmarketing.com).
+- **Lean agencies** building sites and apps for clients, who process personal data on the client's behalf and need clean processor terms. This is the exact position most small web studios are in, including [VerySEOly](https://veryseoly.com), the web studio of the company that maintains this repo.
 - **Anyone activating a newsletter, analytics, payments, or hosting stack** who now needs to name their sub-processors publicly and keep that list honest.
 
 If you handle other people's personal data as a **processor** (you do things with data on a customer's instructions), you need a DPA. If you decide **why and how** data is processed, you are a **controller**, and you still need to disclose your sub-processors. Most small SaaS businesses are both, on different data.
@@ -59,9 +59,9 @@ A DPA is a promise. The sub-processor list is where you keep it. The pattern thi
 3. **Give notice before you change it.** Adopt a fixed window (30 days is a sensible default for small SaaS) between announcing a new or changed sub-processor and switching it on, so customers can object.
 4. **Log the change.** Keep a short dated history so anyone can see what changed and when.
 
-You can see this discipline running in public on the Brother Sylvester education platform's sub-processor page at [brothersylvester.com/data-processors](https://brothersylvester.com/data-processors), which is maintained to the same 30-day notice pattern described here.
+You can see this discipline running in public on TicketWave HQ's own sub-processor register at [ticketwavehq.com/data-processors](https://ticketwavehq.com/data-processors), with every processor's region and agreement named.
 
-For the wider question of **where** your sub-processors are hosted, and how to keep an EEA/UK-sovereign default without banning the handful of non-EU vendors that are hard to replace, see the companion checklist repo: [github.com/sansware/eu-sovereignty-checklist](https://github.com/sansware/eu-sovereignty-checklist). The DPA templates here answer "what do we promise the customer"; the sovereignty checklist answers "where does the data actually live".
+For the wider question of **where** your sub-processors are hosted, and how to keep an EEA/UK-sovereign default without banning the handful of non-EU vendors that are hard to replace, see the companion checklist repo: [github.com/TicketWaveHQ/eu-sovereignty-checklist](https://github.com/TicketWaveHQ/eu-sovereignty-checklist). The DPA templates here answer "what do we promise the customer"; the sovereignty checklist answers "where does the data actually live".
 
 ## How the files fit together
 
@@ -96,15 +96,15 @@ Open an issue or a pull request. Substantive suggestions from qualified data pro
 
 ## Licence
 
-Released under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). You may use, adapt, and redistribute these templates, including commercially, as long as you give appropriate credit. Attribution to **sansware / UK Web Marketing** with a link back to this repository satisfies the licence.
+Released under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). You may use, adapt, and redistribute these templates, including commercially, as long as you give appropriate credit. Attribution to **TicketWave HQ** with a link back to this repository satisfies the licence. See [NOTICE](NOTICE).
 
 ## Maintainers and related work
 
-Maintained by [sansware](https://github.com/sansware). Built and used in production by [UK Web Marketing](https://ukwebmarketing.com), a small UK studio, and applied on the [Brother Sylvester](https://brothersylvester.com/data-processors) education platform.
+Maintained by [TicketWave HQ](https://ticketwavehq.com) ([@TicketWaveHQ](https://github.com/TicketWaveHQ)), the UK company behind [VerySEOly](https://veryseoly.com), [JorTech](https://www.jortech.co.uk) and [Dacros](https://dacros.com), and used on its own sites. If you would rather have help putting a DPA in place, [Dacros](https://dacros.com) provides UK GDPR and DPIA support for small businesses.
 
 Related repositories:
 
-- [sansware/eu-sovereignty-checklist](https://github.com/sansware/eu-sovereignty-checklist) - where should your data live, and how to keep an EEA/UK-sovereign default.
+- [TicketWaveHQ/eu-sovereignty-checklist](https://github.com/TicketWaveHQ/eu-sovereignty-checklist) - where should your data live, and how to keep an EEA/UK-sovereign default.
 
 ---
 

@@ -70,7 +70,7 @@ Only the parts that change when you fill in the template are shown here.
 - **The payments row is careful.** It records that only the salon's own card is processed, not clients' cards, which changes the risk. And it names both the IDTA and the risk assessment, because the provider is in the US.
 - **Deletion reaches backups through the backup cycle**, not by a promise to surgically wipe every backup, which no small team can honestly make.
 
-For the "where should each of these vendors live" decision that sits behind the region column, see [sansware/eu-sovereignty-checklist](https://github.com/sansware/eu-sovereignty-checklist).
+For the "where should each of these vendors live" decision that sits behind the region column, see [TicketWaveHQ/eu-sovereignty-checklist](https://github.com/TicketWaveHQ/eu-sovereignty-checklist).
 
 ---
 
