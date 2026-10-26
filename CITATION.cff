@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use or adapt this work, please cite it as below."
+title: "UK GDPR Data Processing Agreement templates"
+abstract: "Plain-English UK GDPR Data Processing Agreement (Article 28) and sub-processor disclosure templates for small SaaS and lean agencies. Real, ready-to-adapt text with worked examples and a 30-day change-notice discipline. Not legal advice."
+type: software
+authors:
+  - family-names: Gilbert
+    given-names: Jordan
+    alias: sansware
+    affiliation: "TicketWave HQ Ltd"
+    website: "https://veryseoly.com/jordan"
+contact:
+  - name: "TicketWave HQ Ltd"
+    website: "https://ticketwavehq.com"
+    email: hello@ticketwavehq.com
+repository-code: "https://github.com/TicketWaveHQ/uk-gdpr-dpa-templates"
+url: "https://ticketwavehq.com/practices/cybersecurity-and-assurance"
+license: CC-BY-4.0
+date-released: "2026-07-02"
+keywords:
+  - article-28
+  - cc-by
+  - compliance
+  - data-processing-agreement
+  - data-protection
+  - dpa
+  - dpa-template
+  - gdpr
+  - indie-hackers
+  - privacy
+  - saas
+  - small-business
