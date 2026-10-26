@@ -100,7 +100,7 @@ Released under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICE
 
 ## Maintainers and related work
 
-Maintained by [TicketWave HQ](https://ticketwavehq.com) ([@TicketWaveHQ](https://github.com/TicketWaveHQ)), the UK company behind [VerySEOly](https://veryseoly.com), [JorTech](https://www.jortech.co.uk) and [Dacros](https://dacros.com), and used on its own sites. If you would rather have help putting a DPA in place, [Dacros](https://dacros.com) provides UK GDPR and DPIA support for small businesses.
+Written and maintained by [Jordan Gilbert](https://veryseoly.com/jordan) ([@sansware](https://github.com/sansware)) and published by [TicketWave HQ](https://ticketwavehq.com) ([@TicketWaveHQ](https://github.com/TicketWaveHQ)), the UK company behind [VerySEOly](https://veryseoly.com), [JorTech](https://www.jortech.co.uk) and [Dacros](https://dacros.com), and used on its own sites. If you would rather have help putting a DPA in place, [Dacros](https://dacros.com) provides UK GDPR and DPIA support for businesses across the UK.
 
 Related repositories:
 
