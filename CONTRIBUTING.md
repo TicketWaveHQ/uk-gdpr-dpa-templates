@@ -25,4 +25,15 @@ If you are a qualified data protection practitioner, please say so in your issue
 
 ## Validation
 
-The example `sub-processors.example.json` is validated by a lightweight GitHub Actions workflow on each pull request. If you change that file, keep it valid JSON with the same top-level keys. See [`.github/workflows/validate.yml`](.github/workflows/validate.yml) and [`scripts/validate-subprocessors.mjs`](scripts/validate-subprocessors.mjs).
+A lightweight GitHub Actions workflow runs on each pull request, offline. It checks that:
+
+- `examples/sub-processors.example.json` is valid, complete, and names a transfer mechanism for every entry outside the UK (and that the validator still rejects one that does not);
+- the example CSV header is unchanged;
+- every file in `templates/` and `examples/` carries the "not legal advice" line near the top and at the bottom;
+- no file contains an em-dash.
+
+Run the validator yourself with `node scripts/validate-subprocessors.mjs`. See [`.github/workflows/validate.yml`](.github/workflows/validate.yml) and [`scripts/validate-subprocessors.mjs`](scripts/validate-subprocessors.mjs).
+
+## Security
+
+To report a security issue, or guidance here that could lead someone to a materially less compliant position, see [`SECURITY.md`](SECURITY.md).

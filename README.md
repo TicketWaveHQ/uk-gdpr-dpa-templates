@@ -1,10 +1,28 @@
 # UK GDPR Data Processing Agreement templates
 
-Plain-English, ready-to-adapt **UK GDPR** Data Processing Agreement (DPA) and sub-processor disclosure templates for small SaaS teams, indie founders, and lean agencies.
+**What it is:** plain-English, ready-to-adapt **UK GDPR** Data Processing Agreement (DPA) and sub-processor disclosure templates, with a filled-in worked example, a machine-readable sub-processor list, and the notices you send when that list changes.
+
+**Who it is for:**
+
+- **Small SaaS and micro-SaaS founders** who have just signed a customer who wants a DPA and do not have a legal team on call.
+- **Lean agencies** building sites and apps for clients, who process personal data on the client's behalf and need clean processor terms. This is the exact position most small web studios are in, including [VerySEOly](https://veryseoly.com), the web studio of the company that maintains this repo.
+- **Anyone activating a newsletter, analytics, payments, or hosting stack** who now needs to name their sub-processors publicly and keep that list honest.
 
 Most DPA templates are written by lawyers for lawyers. These are written to be read by a founder who has ten minutes and a form to fill in, then handed to a lawyer for a final check. Every template is real, complete text, marked up with the clauses you actually have to fill in.
 
 > **This is not legal advice.** These templates are a starting point, not a finished contract. UK data protection law (the UK GDPR and the Data Protection Act 2018) applies to your specific circumstances. Read every clause, fill in every bracket, delete what does not apply, and have a qualified adviser review the result before you sign or publish anything. Use is at your own risk. See [`LICENSE`](LICENSE) and [`DISCLAIMER.md`](DISCLAIMER.md).
+
+## 60-second start
+
+1. Open [`examples/dpa-worked-example.md`](examples/dpa-worked-example.md) to see what a finished DPA looks like for a fictional two-person SaaS.
+2. Copy [`templates/data-processing-agreement.md`](templates/data-processing-agreement.md) into your own document and fill in every `[SQUARE BRACKET]`.
+3. Complete **Schedule 1** (details of processing) and **Schedule 2** (sub-processors). These are the parts customers and regulators actually read.
+4. Publish your sub-processor list from [`templates/sub-processor-disclosure.md`](templates/sub-processor-disclosure.md), and commit to a change-notice window.
+5. Have a qualified adviser review the whole thing before it becomes a live contract.
+
+Delete any optional clause that does not apply to you, and its heading. If you keep the list as data, start from [`examples/sub-processors.example.json`](examples/sub-processors.example.json) and check it with `node scripts/validate-subprocessors.mjs your-list.json` (Node.js 18 or newer, no dependencies).
+
+If you handle other people's personal data as a **processor** (you do things with data on a customer's instructions), you need a DPA. If you decide **why and how** data is processed, you are a **controller**, and you still need to disclose your sub-processors. Most small SaaS businesses are both, on different data.
 
 ## Contents
 
@@ -13,28 +31,11 @@ Most DPA templates are written by lawyers for lawyers. These are written to be r
 | [`templates/data-processing-agreement.md`](templates/data-processing-agreement.md) | The full DPA. Article 28 UK GDPR processor terms, written in plain English, with a schedule for the details of the processing. |
 | [`templates/sub-processor-disclosure.md`](templates/sub-processor-disclosure.md) | A public sub-processor list template plus the change-notice wording for a 30-day disclosure discipline. |
 | [`templates/sub-processor-change-notice.md`](templates/sub-processor-change-notice.md) | The short email and on-page notice you send when you add, remove, or change a sub-processor. |
-| [`templates/international-transfer-addendum.md`](templates/international-transfer-addendum.md) | The UK International Data Transfer Addendum (IDTA) cover note and when to use it. |
-| [`templates/ai-processing-addendum.md`](templates/ai-processing-addendum.md) | AI and machine-learning processing: model disclosure, inference region, training restrictions, AI Act roles |
+| [`templates/international-transfer-addendum.md`](templates/international-transfer-addendum.md) | When a transfer outside the UK needs the ICO's International Data Transfer Agreement (IDTA) or its Addendum to the EU Standard Contractual Clauses, with a cover note to sit alongside. |
+| [`templates/ai-processing-addendum.md`](templates/ai-processing-addendum.md) | AI and machine-learning processing: model disclosure, inference region, training restrictions, AI Act roles. |
 | [`examples/dpa-worked-example.md`](examples/dpa-worked-example.md) | The DPA filled in for a fictional small SaaS, so you can see what "done" looks like. |
 | [`examples/sub-processors.example.json`](examples/sub-processors.example.json) | A machine-readable sub-processor list you can render into a public page. |
 | [`examples/sub-processors.example.csv`](examples/sub-processors.example.csv) | The same list as a spreadsheet-friendly CSV. |
-
-## Who this is for
-
-- **Small SaaS and micro-SaaS founders** who have just signed a customer who wants a DPA and do not have a legal team on call.
-- **Lean agencies** building sites and apps for clients, who process personal data on the client's behalf and need clean processor terms. This is the exact position most small web studios are in, including [VerySEOly](https://veryseoly.com), the web studio of the company that maintains this repo.
-- **Anyone activating a newsletter, analytics, payments, or hosting stack** who now needs to name their sub-processors publicly and keep that list honest.
-
-If you handle other people's personal data as a **processor** (you do things with data on a customer's instructions), you need a DPA. If you decide **why and how** data is processed, you are a **controller**, and you still need to disclose your sub-processors. Most small SaaS businesses are both, on different data.
-
-## Quick start
-
-1. Copy [`templates/data-processing-agreement.md`](templates/data-processing-agreement.md) into your own document.
-2. Fill in every `[SQUARE BRACKET]` placeholder. They mark the details that are specific to you: names, addresses, the data you process, and the sub-processors you use.
-3. Complete **Schedule 1** (details of processing) and **Schedule 2** (sub-processors). These are the parts customers and regulators actually read.
-4. Delete any optional clause that does not apply to you, and its heading.
-5. Publish your sub-processor list using [`templates/sub-processor-disclosure.md`](templates/sub-processor-disclosure.md), and commit to a change-notice window.
-6. Have a qualified adviser review the whole thing before it becomes a live contract.
 
 ## What a good small-SaaS DPA actually needs
 
@@ -77,7 +78,9 @@ Customer  ──signs──▶  data-processing-agreement.md   (your Article 28 
                               when it changes ▼
                               sub-processor-change-notice.md   (30-day notice)
 
-Cross-border? ──▶ international-transfer-addendum.md   (UK IDTA cover note)
+Cross-border? ──▶ international-transfer-addendum.md   (IDTA or Addendum cover note)
+
+AI in the loop? ──▶ ai-processing-addendum.md   (models, inference region, training)
 ```
 
 ## British English and plain language
@@ -100,11 +103,14 @@ Released under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICE
 
 ## Maintainers and related work
 
-Written and maintained by [Jordan Gilbert](https://veryseoly.com/jordan) ([@sansware](https://github.com/sansware)) and published by [TicketWave HQ](https://ticketwavehq.com) ([@TicketWaveHQ](https://github.com/TicketWaveHQ)), the UK company behind [VerySEOly](https://veryseoly.com), [JorTech](https://www.jortech.co.uk) and [Dacros](https://dacros.com), and used on its own sites. If you would rather have help putting a DPA in place, [Dacros](https://dacros.com) provides UK GDPR and DPIA support for businesses across the UK.
+Written and maintained by [Jordan Gilbert](https://veryseoly.com/jordan) ([@eu-jordangilbert](https://github.com/eu-jordangilbert)) and published by [TicketWave HQ](https://ticketwavehq.com) ([@TicketWaveHQ](https://github.com/TicketWaveHQ)), the UK company behind [VerySEOly](https://veryseoly.com), [JorTech](https://www.jortech.co.uk) and [Dacros](https://dacros.com), and used on its own sites. If you would rather have help putting a DPA in place, [Dacros](https://dacros.com) provides UK GDPR and DPIA support for businesses across the UK.
 
 Related repositories:
 
 - [TicketWaveHQ/eu-sovereignty-checklist](https://github.com/TicketWaveHQ/eu-sovereignty-checklist) - where should your data live, and how to keep an EEA/UK-sovereign default.
+- [TicketWaveHQ/eu-sovereign-stack](https://github.com/TicketWaveHQ/eu-sovereign-stack) - EEA/UK-hosted vendors for each part of the stack, with how to pin and verify each region.
+
+Security reports: see [`SECURITY.md`](SECURITY.md). Changes: see [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
