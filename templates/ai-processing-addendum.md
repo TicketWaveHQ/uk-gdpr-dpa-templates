@@ -41,8 +41,8 @@ record for each model used in AI Processing stating:
 5. the date the model was last reviewed, and its review or sunset date.
 
 > **Why version matters.** Providers change model behaviour, terms and regions
-> between versions. A record naming only a family — rather than the version in
-> use — cannot evidence what was true when the processing happened.
+> between versions. A record naming only a family, rather than the version in
+> use, cannot evidence what was true when the processing happened.
 
 ## 3. Inference region
 
@@ -79,7 +79,7 @@ together with the basis for it.
 
 Where AI Processing contributes to a decision producing legal or similarly
 significant effects, the Processor shall record whether the decision is **solely
-or partly automated**, and shall ensure human review is meaningful — that is,
+or partly automated**, and shall ensure human review is meaningful: that is,
 the reviewer has the authority, information and practical ability to reach a
 different outcome.
 
@@ -98,8 +98,8 @@ The parties acknowledge the transparency obligations in Article 50 of Regulation
 
 ## 8. Roles under the EU AI Act
 
-The parties shall each assess and record their own role — **provider, deployer,
-importer or distributor** — for each AI system in scope, and shall notify the
+The parties shall each assess and record their own role (**provider, deployer,
+importer or distributor**) for each AI system in scope, and shall notify the
 other where that assessment changes.
 
 > **Integrating a third-party foundation model does not automatically make you a
@@ -108,14 +108,22 @@ other where that assessment changes.
 
 ## 9. Prohibited processing
 
+The Processor shall not use AI Processing for any purpose prohibited under
+applicable AI regulation, whatever the instruction.
+
 The Processor shall not, without the Controller's prior written instruction, use
 AI Processing for:
 
 - biometric identification or categorisation of Data Subjects;
 - emotion inference in the workplace or in education;
 - evaluation or classification of Data Subjects over time based on social
-  behaviour or personal characteristics;
-- any purpose prohibited under applicable AI regulation.
+  behaviour or personal characteristics.
+
+> **An instruction cannot make a prohibited practice lawful.** Where the EU AI
+> Act applies, Article 5 prohibits some of the uses above outright, including
+> emotion recognition in the workplace and in education (other than for
+> medical or safety reasons) and social scoring. Check which apply before
+> relying on an instruction.
 
 ## 10. Records, audit and incidents
 
@@ -124,7 +132,7 @@ compliance, covering purpose, model, data classes, oversight and transparency
 measures, and shall make it available under the DPA's audit provisions.
 
 An incident affecting the integrity, confidentiality or availability of Personal
-Data in AI Processing — including unintended disclosure through model output —
+Data in AI Processing, including unintended disclosure through model output,
 is a Personal Data Breach under the DPA and is handled under its breach
 provisions.
 
@@ -135,3 +143,7 @@ Name: [NAME] · Position: [POSITION] · Date: [DATE]
 
 **Signed for the Processor**
 Name: [NAME] · Position: [POSITION] · Date: [DATE]
+
+---
+
+*Not legal advice. Adapt to your case and take qualified advice before you rely on this.*
