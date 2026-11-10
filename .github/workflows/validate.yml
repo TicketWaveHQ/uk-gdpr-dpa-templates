@@ -1,9 +1,12 @@
 name: Validate templates
 
+# Offline checks only: no network, no secrets, no deploy.
+
 on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -11,17 +14,31 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Check out
-        uses: actions/checkout@v4
-
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
-          node-version: 20
+          node-version: "24"
 
       - name: Validate sub-processor example
         run: node scripts/validate-subprocessors.mjs
+
+      - name: Validator rejects a non-UK entry with no transfer mechanism
+        run: |
+          node -e '
+            const d = require("./examples/sub-processors.example.json");
+            const i = d.subProcessors.findIndex((s) => s.outsideUk);
+            d.subProcessors[i].transferMechanism = null;
+            require("fs").writeFileSync(process.argv[1], JSON.stringify(d));
+          ' "$RUNNER_TEMP/bad.json"
+          if node scripts/validate-subprocessors.mjs "$RUNNER_TEMP/bad.json"; then
+            echo "::error::The validator accepted an outsideUk entry with no transferMechanism."
+            exit 1
+          fi
+          echo "Rejected as expected."
 
       - name: Validate example CSV header
         run: |
@@ -29,13 +46,27 @@ jobs:
           grep -q '^name,purpose,personal_data,region,outside_uk,transfer_mechanism$' \
           && echo "CSV header OK" || (echo "CSV header changed unexpectedly" && exit 1)
 
-      - name: Check disclaimer present on every template
+      - name: Disclaimer at the top and bottom of every template and example
         run: |
           missing=0
           for f in templates/*.md examples/*.md; do
-            if ! grep -qi "not legal advice" "$f"; then
-              echo "missing 'not legal advice' notice: $f"
+            if ! head -n 10 "$f" | grep -qi "not legal advice"; then
+              echo "::error file=$f::missing 'not legal advice' near the top"
+              missing=1
+            fi
+            if ! tail -n 5 "$f" | grep -qi "not legal advice"; then
+              echo "::error file=$f::missing 'not legal advice' at the bottom"
               missing=1
             fi
           done
           exit $missing
+
+      - name: House style (no em-dashes)
+        run: |
+          if grep -rnP "\x{2014}" --exclude-dir=.git \
+              --include='*.md' --include='*.mjs' --include='*.json' \
+              --include='*.csv' --include='*.yml' --include='*.cff' .; then
+            echo "::error::Found em-dash characters (U+2014). Use a comma, a colon or a hyphen instead."
+            exit 1
+          fi
+          echo "No em-dashes found."

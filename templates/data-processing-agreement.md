@@ -19,7 +19,7 @@ each a **"Party"** and together the **"Parties"**.
 
 1.2 In this DPA:
 
-- **"UK GDPR"** means the retained EU General Data Protection Regulation as it forms part of the law of England and Wales, Scotland, and Northern Ireland, together with the **Data Protection Act 2018**.
+- **"UK GDPR"** means the UK GDPR as defined in section 3(10) of the Data Protection Act 2018 (the General Data Protection Regulation as it forms part of the law of England and Wales, Scotland, and Northern Ireland), together with the **Data Protection Act 2018**.
 - **"controller"**, **"processor"**, **"data subject"**, **"personal data"**, **"processing"**, **"personal data breach"**, and **"supervisory authority"** have the meanings given in the UK GDPR.
 - **"personal data"** here means only the personal data the Processor processes on the Controller's behalf under the Main Agreement, described in **Schedule 1**.
 - **"sub-processor"** means any third party engaged by the Processor to process personal data on the Controller's behalf.
@@ -73,7 +73,7 @@ The Processor shall:
 
 5.1 The Processor will not transfer the personal data outside the United Kingdom unless clause 5.2 is met.
 
-5.2 Any transfer of personal data to a country outside the UK will be covered by an appropriate transfer mechanism under Article 44 to 49 UK GDPR, such as UK adequacy regulations, or the UK International Data Transfer Addendum to the EU Standard Contractual Clauses (**"IDTA"**). Where the IDTA is used, the [`international-transfer-addendum.md`](international-transfer-addendum.md) cover note in this repository sets out the approach and the IDTA is incorporated by reference.
+5.2 Any transfer of personal data to a country outside the UK will be covered by an appropriate transfer mechanism under Articles 44 to 49 UK GDPR, such as UK adequacy regulations, the International Data Transfer Agreement issued by the Information Commissioner (**"IDTA"**), or the International Data Transfer Addendum to the EU Standard Contractual Clauses (the **"Addendum"**). Where the IDTA or the Addendum is used, the [`international-transfer-addendum.md`](international-transfer-addendum.md) cover note in this repository sets out the approach and the document used is incorporated by reference.
 
 5.3 Schedule 2 records, for each sub-processor, the country in which it processes the personal data and the transfer mechanism relied on where that country is outside the UK.
 
